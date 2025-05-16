@@ -1,0 +1,16 @@
+gRPC 是 Google 开发的开源 RPC 框架。它旨在让服务间通信变得更：
+快速（得益于 HTTP/2）；
+类型安全（通过 Protocol Buffers）；
+流式友好（支持实时通信）。
+gRPC 支持的四种 RPC 形式：一元调用（Unary）、服务器端流（Server Streaming）、客户端流（Client Streaming）和双向流（Bidirectional Streaming）
+gRPC 在底层使用 HTTP/2。与 HTTP/1.1 相比，它具有：
+多路复用：在同一连接上并行处理多个请求；
+支持双向流：客户端和服务器可同时发送和接收数据；
+内置头部压缩：加快数据传输速度
+gRPC     vs    REST
+特性         REST              gRPC
+数据格式     JSON/XML          Protocol Buffers 
+流式         罕见/需自己造轮子  内置
+传输层       HTTP/1.1          HTTP/2
+性能         冗长紧凑 &         快
+开发体验     手动写文档         自动生成代码
